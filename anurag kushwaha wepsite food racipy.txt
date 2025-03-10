@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag Kushwaha - Food Recipes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            background-color: skyblue;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .search-box {
+            margin-bottom: 20px;
+        }
+        input {
+            padding: 10px;
+            width: 50%;
+        }
+        .recipe {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Anurag Kushwaha's Food Website</h1>
+    <p>Find and learn how to make delicious dishes!</p>
+    
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search for a recipe..." onkeyup="searchRecipes()">
+    </div>
+    
+    <div id="recipes">
+        <div class="recipe" data-name="vadapav">
+            <h2>Vadapav</h2>
+            <p>Learn how to make Mumbai's famous Vadapav.</p>
+        </div>
+        <div class="recipe" data-name="franky">
+            <h2>Franky</h2>
+            <p>Delicious street-style Franky recipe.</p>
+        </div>
+        <div class="recipe" data-name="pizza">
+            <h2>Pizza</h2>
+            <p>Easy homemade Pizza recipe.</p>
+        </div>
+        <div class="recipe" data-name="panipuri">
+            <h2>Pani Puri</h2>
+            <p>Make crispy and spicy Pani Puri at home.</p>
+        </div>
+    </div>
+    
+    <script>
+        function searchRecipes() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let recipes = document.getElementsByClassName('recipe');
+            
+            for (let i = 0; i < recipes.length; i++) {
+                let recipeName = recipes[i].getAttribute('data-name');
+                if (recipeName.includes(input)) {
+                    recipes[i].style.display = "block";
+                } else {
+                    recipes[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+  ID :     anuragkushwaha7373@outlook.com
+
+
+ PSW :      anurag@7373
+
+
+
+
